@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --inner-size: 70px;
+}
+
+#perant {
+    background-color: cadetblue;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#inner {
+    width: var(--inner-size);
+    height: var(--inner-size);
+    background-image: url("./car.png");
+    background-size: 100%;
+    position: absolute;
+}
+
+.onMobile {
+    display: none;
+    grid-template-areas: "top top""left right""bottom bottom";
+}
+
+.top {
+    grid-area: top;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+
+.btn {
+    font-size: 25px;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 960px) {
+    .onMobile {
+        display: grid;
+    }
+}
